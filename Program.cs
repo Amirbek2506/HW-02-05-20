@@ -8,9 +8,9 @@ namespace MyprojecsApp
         static void Main(string[] args)
         {
             Console.SetWindowSize(170, 42);
-            for (int i = 0; i < 55; i++)
+            for (int i = 0; i < 160; i++)
             {
-                Matrix instance = new Matrix(i*3, true);
+                Matrix instance = new Matrix(i, true);
                 new Thread(instance.Move).Start();
             }
         }
@@ -43,10 +43,10 @@ namespace MyprojecsApp
 
             while (true)
             {
-                count = rand.Next(3, 12);
+                count = rand.Next(3, 10);
                 lenght = 0;
                 Thread.Sleep(rand.Next(20, 5000));
-                for (int i = 0; i < 40; i++)
+                for (int i = 0; i <42; i++)
                 {
                     lock (locker)
                     {
@@ -67,7 +67,7 @@ namespace MyprojecsApp
                             NeedSecond = false;
                         }
 
-                        if (39 - i < lenght)
+                        if (41 - i < lenght)
                             lenght--;
                         Console.CursorTop = i - lenght + 1;
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
