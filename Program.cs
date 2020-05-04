@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace MyprojecsApp
 {
@@ -7,12 +8,13 @@ namespace MyprojecsApp
     {
         static void Main(string[] args)
         {
+            /*
             Console.SetWindowSize(170, 42);
             for (int i = 0; i < 160; i++)
             {
                 Matrix instance = new Matrix(i, true);
                 new Thread(instance.Move).Start();
-            }
+            }*/
         }
     }
     class Matrix
@@ -46,7 +48,7 @@ namespace MyprojecsApp
                 count = rand.Next(3, 10);
                 lenght = 0;
                 Thread.Sleep(rand.Next(20, 5000));
-                for (int i = 0; i <42; i++)
+                for (int i = 0; i < 42; i++)
                 {
                     lock (locker)
                     {
